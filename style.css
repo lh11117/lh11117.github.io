@@ -12,8 +12,6 @@ body {
     flex-grow: 1;
     overflow:auto;
     height: 50%;
-    margin-top: 210.21px;
-    margin-bottom: 50.06px;
 }
 
 /* 设置页眉样式 */
@@ -21,15 +19,27 @@ header {
     background-color: #333;
     color: #fff;
     padding: 10px;
-    position:fixed;
+    position:sticky;
     top:0px;
-    left:0px;
-    width: 100%;
 }
 
-header>img {
+header>h1 {
+    margin-left: 10px;
+}
+
+header>div>img {
     height: 50px;
     border-radius: 50%;
+    position: absolute;
+    top: 15px;
+    right: 10px;
+}
+
+header>div>p {
+    border-radius: 50%;
+    position: absolute;
+    top: 60px;
+    right: 10px;
 }
 
 /* 设置导航栏样式 */
@@ -85,10 +95,8 @@ footer {
     color: #fff;
     padding: 10px;
     text-align: center;
-    position:fixed;
+    position:sticky;
     bottom:0px;
-    left:0px;
-    width: 100%;
 }
 
 .link{
