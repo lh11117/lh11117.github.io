@@ -3,12 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LemonxNote | 柠檬白板</title>
+    <title>LemonxNote | 柠檬白板 (下载很快开始)</title>
 </head>
 <body>
-    <p>下载很快开始! (如果您的浏览器还没有开始下载, 请点击<a href="https://raw.gitcode.com/weixin_61221827/lemonx-note-api/assets/475">这里</a>)</p>
+    <p style="text-align:center;color:#f00;font-size:24px;font-weight:bold;">下载很快开始! (如果您的浏览器还没有开始下载, 请点击<a href="https://raw.gitcode.com/weixin_61221827/lemonx-note-api/assets/475">这里</a>)</p>
+    <br>
+    <p style="text-align:center;">放松一下吧! 这里有个小游戏可以玩哦！<br><br><font size="3" face="黑体">游戏《圈小猫》</font></p>
+    <script src="../phaser.min.js"></script>
+    <script src="../catch-the-cat.js"></script>
+    <div id="catch-the-cat" style="margin: 0 auto;width: 570px"></div>
+
+    <br><br>
+    <a href="index.html" title="返回首页" style="display: flex;justify-content: center;text-decoration: none;color: #09f;font-weight: bold;font-size: 20px;"><img src="../home.png" width="30" height="30" alt="点击返回主页"/>返回首页</a>
 </body>
 <script>
     location.href = "https://raw.gitcode.com/weixin_61221827/lemonx-note-api/assets/475";
+    window.game = new CatchTheCatGame({
+          w: 11,
+          h: 11,
+          r: 20,
+          backgroundColor: 16777215,
+          parent: "catch-the-cat",
+          statusBarAlign: "center",
+          credit: "Thanks for downloading!",
+        });
 </script>
 </html>

@@ -3,7 +3,12 @@
     margin: 0;
 }
 
-button.download-btn{
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+button.download-btn, button.source-btn{
     background-color: #4CAF50;
     color: white;
     border: none;
@@ -15,11 +20,9 @@ button.download-btn{
     margin: 4px 2px;
     cursor: pointer;
     transition: 0.5s;
-    position: absolute;
-    right: 5px;
 }
 
-button.download-btn:hover{
+button.download-btn:hover, button.source-btn:hover{
     background-color: #3e8e41;
     padding: 5px 10px;
     margin: 9px 12px;
@@ -33,4 +36,110 @@ button.download-btn:hover{
     padding: 10px;
     text-align: center;
     height: 50px;
+    display: flex;
+}
+
+p.header-title{
+    font-size: 24px;
+    font-weight: bold;
+    flex-grow: 1;
+    float: left;
+    position: relative;
+}
+
+p.header-title>a.header-title-link{
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translate(0, -50%);
+}
+
+div.main-btn {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+div.main>* {
+    margin: 15px;
+}
+
+div.footer{
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    height: 50px;
+    position: fixed;
+    bottom: 0px;
+    width: calc(100% - 20px);
+}
+
+div.main {
+    padding-bottom: 70px;
+}
+
+div.license {
+    position: fixed;
+    width: 100%;
+    background-color: #33333356;
+    text-align: center;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 9999;
+}
+
+div.license>div.inner-license {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 80%;
+    max-width: 800px;
+    background-color: #fff;
+    padding: 20px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+textarea.license-textarea {
+    width: calc(100% - 20px);
+    flex-grow: 1;
+    padding: 10px;
+    resize:none;
+}
+
+div.license>div.inner-license>div.license-line {
+    display: flex;
+    margin-top: 5px;
+}
+
+div.license>div.inner-license>div.license-line>* {
+    padding: 5px;
+}
+
+div.license>div.inner-license>div.license-line>.license-button {
+    background-color: #a3b6a3;
+    color: white;
+    border: none;
+    margin: 2px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+div.license>div.inner-license>div.license-line>.license-button:hover {
+    background-color: #a1cea1;
+}
+
+div.license>div.inner-license>div.license-line>.license-button:disabled {
+    background-color: #4e4e4e;
+    cursor: not-allowed;
 }
